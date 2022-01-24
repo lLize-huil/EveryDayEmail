@@ -1,7 +1,7 @@
 // 配置信息
 module.exports = {
   fromDisplayText: '李泽辉', // 收件箱展示的来件人名字
-  fromDisplaySubText: '来自辉哥的爱心邮件', // 收件箱展示的次级标题
+  fromDisplaySubText: '来自辉哥的每日爱心邮件', // 收件箱展示的次级标题
   user: '1841632321@qq.com', // 发送者邮箱
   pass: 'icuqdltxvwmpdegg', // 发送者邮箱MTP协议密码
   to: '643695314@qq.com', // 发送到谁，填邮箱
