@@ -9,5 +9,5 @@ module.exports = {
   location: '101050907',  // 
   type: '1,3,9', // 和风天气-生活指数type
   tianXingKey: 'eb5617dab561c236480cb6ff66ccecad', // 天行数据的key
-  startDay: '2015-09-29', // 在一起的日期
+  startDay: '2022-01-23', // 开始每日邮件的日期
 }
