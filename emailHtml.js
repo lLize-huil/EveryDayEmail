@@ -51,6 +51,9 @@ function fn(weatherData, lifeData, word, imgurl, lovingDays) {
               ${daily[0].name}(${daily[0].category}):
               ${daily[0].text}
             </li>
+            <li style="margin-bottom: 10px">
+              注意身体，开心每一天，记得我爱你哦~
+            </li>
           </ul>
         </div>
       </div>
