@@ -13,10 +13,9 @@ function fn(weatherData, lifeData, word, imgurl, lovingDays) {
       <div>
         <!-- 天数 -->
 
-        <!-- <p>今天是在一起的第${lovingDays}天！</p> -->
-
         <div>
-          <p>今天是在一起的第 0 天 ~</p>
+          <p>今天是我们在一起的第 ? 天</p>
+          <p>开始每日邮件的第${lovingDays}天</p>
         </div>
        
         <!-- 图片 -->
