@@ -15,9 +15,9 @@ function fn(weatherData, lifeData, word, imgurl, lovingDays) {
 
         <!-- <p>今天是在一起的第${lovingDays}天！</p> -->
 
-        <!-- <div>
+        <div>
           <p>今天是在一起的第 0 天 ~</p>
-        </div> -->
+        </div>
        
         <!-- 图片 -->
         <div>
