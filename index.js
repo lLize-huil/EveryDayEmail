@@ -19,7 +19,8 @@ const {
   location,
   type,
   tianXingKey,
-  startDay,
+  LoveStartDay,
+  LogStartDay
 } = require('./config');
 
 async function init() {
@@ -38,20 +39,34 @@ async function init() {
 
     // 获取one一个文案及图片
     const oneRes = await fetch(
-      `http://api.tianapi.com/txapi/one/index?key=${tianXingKey}`
+      `http://api.tianapi.com/txapi/one/index?key=${tianXingKey}&&rand=1`
     );
+    const loveText = await fetch(
+      `http://api.tianapi.com/saylove/index?key=${tianXingKey}`
+    )
     const oneData = await oneRes.json();
-    const { word, imgurl } = oneData.newslist[0];
-
+    const loveTextData = await loveText.json();
+    // const {word,imgurl} = oneData.newslist[0];
+    //{} 方式获取
+    const {word,imgurl} = oneData.newslist[0];
+    const {content} = loveTextData.newslist[0];
+    // console.log(oneData);
+    // console.log(loveTextData);
+    // console.log(word);
+    // console.log(imgurl);
+    // console.log(content);
     // 计算日期
     const lovingDays = dayjs(dayjs().tz('Asia/Shanghai')).diff(
-      startDay,
+      LoveStartDay,
+      'days'
+    );
+    const logDays = dayjs(dayjs().tz('Asia/Shanghai')).diff(
+      LogStartDay,
       'days'
     );
 
     // 用邮件模版生成字符串
-    const htmlStr = emailHtml(weatherData, lifeData, word, imgurl, lovingDays);
-
+    const htmlStr = emailHtml(weatherData, lifeData, content, imgurl, lovingDays, logDays);
     // 发送邮件;
     sendEmail({
       from: fromDisplayText,
