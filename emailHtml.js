@@ -1,4 +1,4 @@
-function fn(weatherData, lifeData, word, imgurl, lovingDays) {
+function fn(weatherData, lifeData, content, imgurl, lovingDays, logDays) {
   const { daily: weatherDataDaily } = weatherData;
   const { daily } = lifeData;
 
@@ -14,8 +14,9 @@ function fn(weatherData, lifeData, word, imgurl, lovingDays) {
         <!-- 天数 -->
 
         <div>
-          <p>今天是我们在一起的第 ? 天</p>
-          <p>开始每日邮件的第${lovingDays}天</p>
+          <!--<p>今天是我们在一起的第 ${lovingDays} 天</p>-->
+          <p>今天是我们在一起的第 0 天</p>
+          <p>开始每日邮件的第${logDays}天</p>
         </div>
        
         <!-- 图片 -->
@@ -29,7 +30,7 @@ function fn(weatherData, lifeData, word, imgurl, lovingDays) {
         <!-- 每日一句 -->
         <div>
           <p style="font-size: 14px; text-indent: 2em; font-style: italic;">
-            ${word}
+            ${content}
           </p>
         </div>
         <!-- 天气 -->
